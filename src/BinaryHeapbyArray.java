@@ -76,6 +76,17 @@ public int extract()
     return result;
   }
 }
+
+// the only element that can be extracted from a heap i.e root
+  // we cannot extract other element that is the property of heap
+  // if we extract root element then we need some adjustment
+  // so the last element in the heap will always be considered as root
+  // after promoting the last element at root we will check it satisfies the min heap property
+  // if not then we swap the values (after comparing the left and right side values)
+  // and we will implement this recursively
+
+
+
 public void heapifyextract(int index)
 {
   int left = index *2;
